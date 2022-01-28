@@ -37,7 +37,7 @@ export interface HomeProps {
 }
 
 const Home = (props: HomeProps) => {
-  const [api_url, setUrl] = useState(process.env.REACT_APP_API_URL)
+  //const [api_url, setUrl] = useState(process.env.REACT_APP_API_URL)//
   const [balance, setBalance] = useState<number>();
   const [isActive, setIsActive] = useState(false); // true when countdown completes
   const [isSoldOut, setIsSoldOut] = useState(false); // true when items remaining is zero
