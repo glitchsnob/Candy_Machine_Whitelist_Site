@@ -175,12 +175,12 @@ const Home = (props: HomeProps) => {
     }
   };
 
-  useEffect(() => {
+ useEffect(() => {
     (async () => {
       if (wallet) {
         const balance = await props.connection.getBalance(wallet.publicKey);
         setBalance(balance / LAMPORTS_PER_SOL);
-        const data = await fetch(`${api_url}/whitelisted/member/${(wallet as anchor.Wallet).publicKey.toString()}`)
+    //    const data = await fetch(`${api_url}/whitelisted/member/${(wallet as anchor.Wallet).publicKey.toString()}`)
         if(data.status.toString() !== "404"){
           SetWhitelisted(true)
         }
